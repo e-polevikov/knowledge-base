@@ -1,2 +1,3 @@
-# algorithms
-Repo that contains implementation of various algorithms
+# Algorithms
+
+Repo that contains implementations of various algorithms
