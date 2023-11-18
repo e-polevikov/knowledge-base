@@ -1,4 +1,5 @@
 SRC_DIR=src
+BIN_DIR=bin
 
-all: $(SRC_DIR)/main.cpp $(SRC_DIR)/utils.cpp $(SRC_DIR)/dfs.cpp
-	g++ $(SRC_DIR)/main.cpp $(SRC_DIR)/utils.cpp $(SRC_DIR)/dfs.cpp -o bin/main
+all: $(SRC_DIR)/*.cpp
+	g++ $(SRC_DIR)/*.cpp -o $(BIN_DIR)/main

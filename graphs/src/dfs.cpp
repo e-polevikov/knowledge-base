@@ -3,7 +3,13 @@
 #include <stack>
 #include <iostream>
 
-// O(V + E)
+// A function takes an unweighted graph as input
+// and returns a list of connected components. The
+// function applies the depth-first search algorithm
+// to find the components in the graph.
+//
+// Time complexity: O(V + E)
+// Memory: O(V)
 std::vector<std::vector<int>> depthFirstSearch(
     const std::vector<std::vector<int>> &graph
 ) {
