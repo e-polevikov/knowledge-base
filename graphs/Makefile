@@ -1,2 +1,4 @@
-all: src/main.cpp src/utils.cpp
-	g++ src/main.cpp src/utils.cpp -o bin/main
+SRC_DIR=src
+
+all: $(SRC_DIR)/main.cpp $(SRC_DIR)/utils.cpp $(SRC_DIR)/dfs.cpp
+	g++ $(SRC_DIR)/main.cpp $(SRC_DIR)/utils.cpp $(SRC_DIR)/dfs.cpp -o bin/main
