@@ -1,5 +1,6 @@
 #include "utils.hpp"
 
+// For unweighted graphs
 void readGraph(std::vector<std::vector<int>> &graph) {
     int numVertices = 0;
     int numEdges = 0;
@@ -19,11 +20,43 @@ void readGraph(std::vector<std::vector<int>> &graph) {
     }
 }
 
+// For unweighted graphs
 void printGraph(const std::vector<std::vector<int>> &graph) {
     for (int i = 0; i < graph.size(); i++) {
         std::cout << i << ": ";
         for (int j = 0; j < graph[i].size(); j++) {
             std::cout << graph[i][j] << " "; 
+        }
+        std::cout << std::endl;
+    }
+}
+
+// For weighted graphs
+void readGraph(std::vector<std::vector<std::pair<int, int>>> &graph) {
+    int numVertices = 0;
+    int numEdges = 0;
+
+    std::cin >> numVertices;
+    std::cin >> numEdges;
+
+    graph.resize(numVertices);
+
+    for (int i = 0; i < numEdges; i++) {
+        int vtxFrom, vtxTo, weight;
+
+        std::cin >> vtxFrom >> vtxTo >> weight;
+
+        graph[vtxFrom].push_back(std::make_pair(vtxTo, weight));
+        graph[vtxTo].push_back(std::make_pair(vtxFrom, weight));
+    }
+}
+
+// For weighted graphs
+void printGraph(const std::vector<std::vector<std::pair<int, int>>> &graph) {
+    for (int i = 0; i < graph.size(); i++) {
+        std::cout << i << ": ";
+        for (int j = 0; j < graph[i].size(); j++) {
+            std::cout << "(" << graph[i][j].first << ", " << graph[i][j].second << ") "; 
         }
         std::cout << std::endl;
     }

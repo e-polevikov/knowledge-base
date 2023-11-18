@@ -1,7 +1,7 @@
 #include "bfs.hpp"
 #include <queue>
 
-// A function takes a graph and a source vertex as
+// A function takes an unweighted graph and a source vertex as
 // input parameters and returns a vector of shortest distances
 // from the source vertex to all other vertices of
 // the graph. If some vertex is not reachable from
@@ -29,12 +29,12 @@ std::vector<int> breadthFirstSearch(
         bfsQueue.pop();
 
         for (int i = 0; i < graph[currentVtx].size(); i++) {
-            int neightbourVtx = graph[currentVtx][i];
+            int neighbourVtx = graph[currentVtx][i];
 
-            if (!visited[neightbourVtx]) {
-                visited[neightbourVtx] = true;
-                distances[neightbourVtx] = distances[currentVtx] + 1;
-                bfsQueue.push(neightbourVtx);
+            if (!visited[neighbourVtx]) {
+                visited[neighbourVtx] = true;
+                distances[neighbourVtx] = distances[currentVtx] + 1;
+                bfsQueue.push(neighbourVtx);
             }
         }
     }
