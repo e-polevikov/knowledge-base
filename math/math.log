@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.11.20)  22 NOV 2023 03:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.11.20)  23 NOV 2023 04:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -514,54 +514,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
-[2] [3] (./math.aux)
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
+
+ []
+
+[3] [4] (./math.aux)
 Package rerunfilecheck Info: File `math.out' has not changed.
-(rerunfilecheck)             Checksum: 05EA7BD32592A9F61647372079642D0F;1864.
+(rerunfilecheck)             Checksum: 3826954A186B316BB5CBE857F7C0FC9C;2845.
  ) 
 Here is how much of TeX's memory you used:
- 9861 strings out of 479721
- 150461 string characters out of 5887696
- 460859 words of memory out of 5000000
- 27725 multiletter control sequences out of 15000+600000
+ 9868 strings out of 479721
+ 150557 string characters out of 5887696
+ 457859 words of memory out of 5000000
+ 27728 multiletter control sequences out of 15000+600000
  475834 words of font info for 40 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 60i,7n,63p,804b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,7n,63p,804b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/evgeny/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1000.600p
 k> </home/evgeny/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.60
 0pk> </home/evgeny/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1000.60
@@ -575,10 +590,10 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb>
-Output written on math.pdf (3 pages, 114183 bytes).
+Output written on math.pdf (4 pages, 124075 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 279 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
+ 14 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,5 +2,5 @@
 bin
 
 .vscode
-*.gz
+.*.gz
 *.log
