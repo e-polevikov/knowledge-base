@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.11.20)  23 NOV 2023 15:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.11.20)  23 NOV 2023 17:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -516,49 +516,48 @@ LaTeX Info: Redefining \nameref on input line 10.
 \@outlinefile=\write3
 \openout3 = `math.out'.
 
+ (./math.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
 
- []
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write4
+\openout4 = `math.toc'.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
@@ -568,8 +567,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
@@ -579,41 +578,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--99
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--110
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
-[5] (./math.aux)
+[6] (./math.aux)
 Package rerunfilecheck Info: File `math.out' has not changed.
-(rerunfilecheck)             Checksum: FB2DCAFE09804168ADAC6E1AB679BB90;4114.
+(rerunfilecheck)             Checksum: D265644AEF1855C0DF2D9386987D3584;5159.
  ) 
 Here is how much of TeX's memory you used:
- 9996 strings out of 479721
- 152579 string characters out of 5887696
- 458313 words of memory out of 5000000
- 27828 multiletter control sequences out of 15000+600000
+ 10014 strings out of 479721
+ 152805 string characters out of 5887696
+ 462313 words of memory out of 5000000
+ 27835 multiletter control sequences out of 15000+600000
  477079 words of font info for 46 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 60i,7n,63p,804b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/evgeny/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1000.600p
-k> </home/evgeny/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.60
-0pk> </home/evgeny/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1000.60
+ 60i,7n,63p,804b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/evgeny/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.60
 0pk> </home/evgeny/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.60
+0pk> </home/evgeny/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1000.60
+0pk> </home/evgeny/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1000.60
 0pk> </home/evgeny/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.60
 0pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/sha
@@ -624,10 +628,10 @@ st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb>
-Output written on math.pdf (5 pages, 144193 bytes).
+Output written on math.pdf (6 pages, 153116 bytes).
 PDF statistics:
- 335 PDF objects out of 1000 (max. 8388607)
- 143 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 398 PDF objects out of 1000 (max. 8388607)
+ 186 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 145 words of extra memory for PDF output out of 10000 (max. 10000000)
 
