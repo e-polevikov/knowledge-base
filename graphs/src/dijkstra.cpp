@@ -7,8 +7,9 @@ const int INF = 1000000000;
 
 // The function below takes a weighted graph and a source vertex
 // as input and returns a list of shortest distances from the source
-// vertex to all other vertices of the graph. The function utilizes
-// the Dijkstra's algorithm to calculate these distances.
+// vertex to all other vertices of the graph. All the distances should
+// be non-negative numbers. The function utilizes the Dijkstra's
+// algorithm to calculate these distances.
 //
 // Time complexity: O(V * log(V) + E * log(V))
 // Memory: O(V)
