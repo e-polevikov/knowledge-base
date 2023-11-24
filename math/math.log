@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.11.20)  23 NOV 2023 17:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.11.20)  24 NOV 2023 12:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -602,18 +602,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
  []
 
-[6] (./math.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+ []
+
+[7] (./math.aux)
 Package rerunfilecheck Info: File `math.out' has not changed.
-(rerunfilecheck)             Checksum: D265644AEF1855C0DF2D9386987D3584;5159.
+(rerunfilecheck)             Checksum: E4B8B23094323E9586CE1D701C28729D;5573.
  ) 
 Here is how much of TeX's memory you used:
- 10014 strings out of 479721
- 152805 string characters out of 5887696
- 462313 words of memory out of 5000000
- 27835 multiletter control sequences out of 15000+600000
+ 10019 strings out of 479721
+ 152861 string characters out of 5887696
+ 462315 words of memory out of 5000000
+ 27837 multiletter control sequences out of 15000+600000
  477079 words of font info for 46 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 60i,7n,63p,804b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,7n,63p,804b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/evgeny/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.60
 0pk> </home/evgeny/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.60
 0pk> </home/evgeny/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1000.60
@@ -628,10 +638,10 @@ st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb>
-Output written on math.pdf (6 pages, 153116 bytes).
+Output written on math.pdf (7 pages, 159027 bytes).
 PDF statistics:
- 398 PDF objects out of 1000 (max. 8388607)
- 186 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 145 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 431 PDF objects out of 1000 (max. 8388607)
+ 205 compressed objects within 3 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
