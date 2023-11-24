@@ -5,6 +5,7 @@
 #include "dfs.hpp"
 #include "bfs.hpp"
 #include "dijkstra.hpp"
+#include "bellman_ford.hpp"
 
 int main() {
     std::vector<std::vector<std::pair<int, int>>> graph;
@@ -12,7 +13,8 @@ int main() {
     readGraph(graph);
     printGraph(graph);
 
-    std::vector<int> distances = dijkstra(graph, 4);
+    // std::vector<int> distances = dijkstra(graph, 4);
+    std::vector<int> distances = bellman_ford(graph, 4);
 
     /*
     std::vector<std::vector<int>> connectedComponents = depthFirstSearch(graph);
