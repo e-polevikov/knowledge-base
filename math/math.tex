@@ -1,6 +1,7 @@
 \documentclass{article}
+\usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[russian]{babel}
+\usepackage[english, russian]{babel}
 \usepackage{hyperref}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -255,9 +256,41 @@ $$ \phi = \arccos\left(\frac{(x, y)}{|x| \cdot |y|}\right) $$
 
 Рассмотрим эксперимент, в котором возможно конечное число исходов $$\Omega = \{w_1, w_2, \dots, w_n\}$$
 
-Каждое $w_i$ будем называть элементарными событиями, $\Omega$ -- пространством элементраных событий (пространством исходов). Рассмотрим примеры. ...
+Каждое $w_i$ будем называть \textbf{элементарными событиями}, $\Omega$ -- \textbf{пространством элементраных событий} (пространством исходов). Рассмотрим примеры.
+
+\begin{enumerate}
+	\item Подбрасывание монетки. Пространство элементарных исходов состоит из двух событий -- орел или решка. $$\Omega = \{Heads, Tails\}$$
+	\item Подбрасывание игральной кости. $$\Omega = \{1, 2, 3, 4, 5, 6\}$$
+	\item $n$-кратное подбрасывание монеты. $$\Omega = \{w : w = (a_1, a_2, \dots, a_n), a_i  = Heads \ | \ Tails\}$$
+\end{enumerate}
+
+\textbf{Событием} будем называть любое подмножество множества элементраных исходов. Формально $A$ - событие, если $A \subset \Omega$.
+
+\subsection{Вероятностное пространство}
+
+Пусть $\Omega = \{w_1, w_2, \dots, w_n\}$ - пространство элеметраных событий. Рассмотрим набор вещественных чисел $p_1, \dots, p_n$ таких, что $p_i \ge 0$ и $\sum_{i=1}^{n} p_i = 1$. Назовем эти числа вероятностями элементарных событий. Тогда \textbf{вероятностью события} $A \subseteq \Omega$ будем называть сумму вероятностей элементарных событий из множества $A$:
+
+$$ P(A) = \sum_{i: \ w_i \in A} p_i $$
+
+Свойства:
+
+\begin{enumerate}
+	\item $P(\emptyset) = 0, P(\Omega) = 1$
+	\item $0 \le P(A) \le 1$
+	\item Если $A \cap B = \emptyset$, то $P(A \cup B) = P(A) + P(B)$
+	\item $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+	\item $P(\bar{A}) = 1 - P(A)$
+	\item $P\left(\bigcup_{k = 1}^{n} A_k \right) \le \sum_{k = 1}^{n} P(A_k)$
+	\item $P\left(\bigcup_{k = 1}^{n} A_k \right) = \sum_{k = 1}^{n} P(A_k) + \sum_{j < k} P(A_j \cap A_k) - ...$
+\end{enumerate}
+
+\subsection{Классическое определение вероятности}
+
+Пусть $\Omega = \{w_1, w_2, \dots, w_n\}$, при этом $p_1 = p_2 = \dots = p_n = \frac{1}{N}$. Тогда вероятностью события $A$ будем называть отношение мощности множества $A$ к мощности множества всех элементарных исходов: $$ P(A) = \frac{|A|}{|\Omega|} $$
 
 \end{document}
+
+
 
 
 

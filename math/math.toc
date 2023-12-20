@@ -23,3 +23,5 @@
 \contentsline {subsubsection}{\numberline {2.1.2}Принцип Архимеда}{7}{subsubsection.2.1.2}%
 \contentsline {section}{\numberline {3}Теория вероятностей}{8}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Вероятностная модель эксперимента}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Вероятностное пространство}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Классическое определение вероятности}{9}{subsection.3.3}%
