@@ -2,7 +2,7 @@
 
 const int INF = 1000000000;
 
-std::vector<int> bellman_ford(
+std::vector<int> bellmanFord(
     const std::vector<std::vector<std::pair<int, int>>> &graph,
     int source
 ) {

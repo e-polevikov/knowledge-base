@@ -47,7 +47,7 @@ void readGraph(std::vector<std::vector<std::pair<int, int>>> &graph) {
         std::cin >> vtxFrom >> vtxTo >> weight;
 
         graph[vtxFrom].push_back(std::make_pair(vtxTo, weight));
-        graph[vtxTo].push_back(std::make_pair(vtxFrom, weight));
+        // graph[vtxTo].push_back(std::make_pair(vtxFrom, weight));
     }
 }
 

@@ -6,6 +6,7 @@
 #include "bfs.hpp"
 #include "dijkstra.hpp"
 #include "bellman_ford.hpp"
+#include "ford_fulkerson.hpp"
 
 int main() {
     std::vector<std::vector<std::pair<int, int>>> graph;
@@ -13,19 +14,20 @@ int main() {
     readGraph(graph);
     printGraph(graph);
 
+    std::cout << fordFulkerson(graph) << std::endl;
+
     // std::vector<int> distances = dijkstra(graph, 4);
-    std::vector<int> distances = bellman_ford(graph, 4);
+    // std::vector<int> distances = bellman_ford(graph, 4);
 
     /*
     std::vector<std::vector<int>> connectedComponents = depthFirstSearch(graph);
     printConnectedComponents(connectedComponents);
 
     std::vector<int> distances = breadthFirstSearch(graph, 4);
-    */
 
     for (int i = 0; i < distances.size(); i++) {
         std::cout << i << ": " << distances[i] << std::endl;
-    }
+    } */
 
     return 0;
 }
