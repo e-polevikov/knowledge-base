@@ -18,7 +18,6 @@ std::vector<int> dijkstra(
     int source
 ) {
     std::vector<int> distances(graph.size(), INF);
-    std::vector<bool> visited(graph.size(), false);
 
     // min priority queue
     std::priority_queue<
@@ -32,13 +31,12 @@ std::vector<int> dijkstra(
 
     while (!queue.empty()) {
         int currentVtx = queue.top().second;
+        int currentVtxDistance = queue.top().first;
         queue.pop();
 
-        if (visited[currentVtx]) {
+        if (currentVtxDistance > distances[currentVtx]) {
             continue;
         }
-
-        visited[currentVtx] = true;
 
         for (int i = 0; i < graph[currentVtx].size(); i++) {
             int neighbourVtx = graph[currentVtx][i].first;

@@ -8,15 +8,40 @@
 #include "bellman_ford.hpp"
 #include "ford_fulkerson.hpp"
 
-int main() {
+void runFordFulkerson() {
     std::vector<std::vector<std::pair<int, int>>> graph;
 
     readGraph(graph);
+
+    std::cout << "Network:" << std::endl;
     printGraph(graph);
 
-    std::cout << fordFulkerson(graph) << std::endl;
+    std::cout << "Max flow from 0 to " << graph.size() - 1;
+    std::cout << ": " << fordFulkerson(graph) << std::endl;
+}
 
-    // std::vector<int> distances = dijkstra(graph, 4);
+void runDijkstra() {
+    std::vector<std::vector<std::pair<int, int>>> graph;
+
+    readGraph(graph);
+
+    std::cout << "Graph:" << std::endl;
+    printGraph(graph);
+
+    int source = 4;
+    std::vector<int> distances = dijkstra(graph, source);
+
+    for (int i = 0; i < distances.size(); i++) {
+        std::cout << i << ": " << distances[i] << std::endl;
+    }
+}
+
+int main() {
+    // cat resources/network.txt | ./bin/main
+    // runFordFulkerson();
+
+    // runDijkstra();
+
     // std::vector<int> distances = bellman_ford(graph, 4);
 
     /*
