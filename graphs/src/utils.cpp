@@ -1,7 +1,7 @@
 #include "utils.hpp"
 
 // For unweighted graphs
-void readGraph(std::vector<std::vector<int>> &graph) {
+void readGraph(std::vector<std::vector<int>> &graph, bool isDirected) {
     int numVertices = 0;
     int numEdges = 0;
 
@@ -16,7 +16,10 @@ void readGraph(std::vector<std::vector<int>> &graph) {
         std::cin >> vtxFrom >> vtxTo;
 
         graph[vtxFrom].push_back(vtxTo);
-        graph[vtxTo].push_back(vtxFrom);
+
+        if (!isDirected) {
+            graph[vtxTo].push_back(vtxFrom);
+        }
     }
 }
 
@@ -32,7 +35,10 @@ void printGraph(const std::vector<std::vector<int>> &graph) {
 }
 
 // For weighted graphs
-void readGraph(std::vector<std::vector<std::pair<int, int>>> &graph) {
+void readGraph(
+    std::vector<std::vector<std::pair<int, int>>> &graph,
+    bool isDirected
+) {
     int numVertices = 0;
     int numEdges = 0;
 
@@ -47,7 +53,10 @@ void readGraph(std::vector<std::vector<std::pair<int, int>>> &graph) {
         std::cin >> vtxFrom >> vtxTo >> weight;
 
         graph[vtxFrom].push_back(std::make_pair(vtxTo, weight));
-        // graph[vtxTo].push_back(std::make_pair(vtxFrom, weight));
+
+        if (!isDirected) {
+            graph[vtxTo].push_back(std::make_pair(vtxFrom, weight));
+        }
     }
 }
 
