@@ -31,11 +31,11 @@ void runDijkstra() {
     printGraph(graph);
 
     int source = 4;
-    std::vector<int> distances = dijkstra(graph, source);
+    std::vector<Path> shortestPaths = dijkstra(graph, source);
 
-    std::cout << "Shortest distances from " << source << ":" << std::endl;
-    for (int i = 0; i < distances.size(); i++) {
-        std::cout << i << ": " << distances[i] << std::endl;
+    std::cout << "Shortest paths: " << std::endl;
+    for (const auto &path : shortestPaths) {
+        path.print();
     }
 }
 
@@ -87,7 +87,7 @@ int main() {
     // runFordFulkerson();
 
     // cat ./resources/weighted_graph.txt | ./bin/main
-    // runDijkstra();
+    runDijkstra();
 
     return 0;
 }

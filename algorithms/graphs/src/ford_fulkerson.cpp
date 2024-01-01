@@ -1,8 +1,6 @@
 #include "ford_fulkerson.hpp"
 
 #include <vector>
-#include <iostream>
-
 #include "utils.hpp"
 
 const int INF = 1000000000;
