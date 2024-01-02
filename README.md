@@ -1,8 +1,11 @@
-# Algorithms
+# Algorithms and Math
 
-Repo that contains implementations of various algorithms.
+## Algorithms
 
-## Learning Maps
+### Graphs
 
-- [Algorithms](ALGO.md)
-- [Mathmematics](MATH.md)
+See [this folder](https://github.com/e-polevikov/algorithms-and-math/tree/main/algorithms/graphs/src).
+
+## Math
+
+See [math.pdf](https://github.com/e-polevikov/algorithms-and-math/blob/main/math/math.pdf).
