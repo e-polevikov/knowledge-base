@@ -18,6 +18,11 @@ std::vector<Path> dijkstra(
     int source
 );
 
+std::vector<Path> dijkstraModified(
+    const std::vector<std::vector<std::pair<int, int>>> &graph,
+    int source
+);
+
 std::vector<Path> buildShortestPaths(
     int source,
     const std::vector<int> &distances,

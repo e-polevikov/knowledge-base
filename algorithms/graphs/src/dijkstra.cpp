@@ -1,5 +1,6 @@
 #include "dijkstra.hpp"
 #include <queue>
+#include <set>
 #include <algorithm>
 
 const int INF = 1000000000;
@@ -47,6 +48,43 @@ std::vector<Path> dijkstra(
                 distances[neighbourVtx] = newDistance;
                 predecessors[neighbourVtx] = currentVtx;
                 queue.push(std::make_pair(distances[neighbourVtx], neighbourVtx));
+            }
+        }
+    }
+
+    return buildShortestPaths(source, distances, predecessors);
+}
+
+std::vector<Path> dijkstraModified(
+    const std::vector<std::vector<std::pair<int, int>>> &graph,
+    int source
+) {
+    std::vector<int> distances(graph.size(), INF);
+    std::vector<int> predecessors(graph.size(), -1);
+
+    auto vtxComparator = [&distances](int vtx1, int vtx2) {
+        return distances[vtx1] > distances[vtx2];
+    };
+
+    std::set<int, decltype(vtxComparator)> vtxQueue(vtxComparator);
+    
+    distances[source] = 0;
+    vtxQueue.insert(source);
+
+    while (!vtxQueue.empty()) {
+        int currentVtx = *(vtxQueue.begin());
+        vtxQueue.erase(currentVtx);
+
+        for (int i = 0; i < graph[currentVtx].size(); i++) {
+            int neighbourVtx = graph[currentVtx][i].first;
+            int currentToNeighbourDistance = graph[currentVtx][i].second;
+            int newDistance = distances[currentVtx] + currentToNeighbourDistance;
+
+            if (newDistance < distances[neighbourVtx]) {
+                vtxQueue.erase(neighbourVtx);
+                distances[neighbourVtx] = newDistance;
+                vtxQueue.insert(neighbourVtx);
+                predecessors[neighbourVtx] = currentVtx;
             }
         }
     }

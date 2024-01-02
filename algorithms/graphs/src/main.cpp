@@ -32,6 +32,7 @@ void runDijkstra() {
 
     int source = 4;
     std::vector<Path> shortestPaths = dijkstra(graph, source);
+    // std::vector<Path> shortestPaths = dijkstraModified(graph, source);
 
     std::cout << "Shortest paths: " << std::endl;
     for (const auto &path : shortestPaths) {
