@@ -1,14 +1,12 @@
 #include "ford_fulkerson.hpp"
-
 #include <vector>
-#include "utils.hpp"
 
 const int INF = 1000000000;
 
 int fordFulkerson(
     const std::vector<std::vector<std::pair<int, int>>> &network
 ) {
-    // build a graph that contains all edges from the initial network
+    // Build a graph that contains all edges from the initial network
     // and for each edge includes a reverse edge with zero capacity.
     std::vector<std::vector<std::pair<int, int>>> graph(network.size());
 
@@ -36,7 +34,7 @@ int fordFulkerson(
         std::fill(visited.begin(), visited.end(), false);
         path.clear();
 
-        // find any path from source to target
+        // Find any path from source to target
         // and save min capacity of path edges
         visited[currentVtx] = true;
         path.push_back(currentVtx);
@@ -63,13 +61,16 @@ int fordFulkerson(
                 currentVtx = path[path.size() - 1];
             }
         }
+        
+        // If a target vertext is not reachable
+        // on the current iteration, stop the algorithm.
 
         if (currentVtx != target) {
             targetReachableFromSource = false;
             break;
         }
 
-        // decrease capacity of path edges by min capacity and
+        // Decrease capacity of path edges by min capacity and
         // increase capacity of path inverse edges by min capacity
         for (int i = 0; i < path.size() - 1; i++) {
             int vtxFrom = path[i];

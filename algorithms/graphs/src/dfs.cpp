@@ -1,15 +1,16 @@
 #include "dfs.hpp"
-
 #include <stack>
 #include <iostream>
 
-// A function takes an unweighted graph as input
-// and returns a list of connected components. The
-// function applies the depth-first search algorithm
-// to find the components in the graph.
-//
-// Time complexity: O(V + E)
-// Memory: O(V)
+/*
+A function takes an unweighted graph as input
+and returns a list of connected components of this graph.
+The function applies the depth-first search algorithm
+to find the components in the graph.
+
+Time complexity: O(V + E)
+Memory: O(V)
+*/
 
 std::vector<std::vector<int>> depthFirstSearch(
     const std::vector<std::vector<int>> &graph

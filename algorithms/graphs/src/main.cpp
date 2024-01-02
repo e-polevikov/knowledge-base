@@ -51,6 +51,10 @@ void runBellmanFord() {
 
     int source = 4;
     std::vector<int> distances = bellmanFord(graph, source);
+
+    for (int i = 0; i < distances.size(); i++) {
+        std::cout << i << ": " << distances[i] << std::endl;
+    }
 }
 
 void runDepthFirstSearch() {
@@ -84,11 +88,13 @@ void runBreadthFirstSearch() {
 }
 
 int main() {
-    // cat resources/network.txt | ./bin/main
-    // runFordFulkerson();
+    // cat resources/*.txt | ./bin/main
 
-    // cat ./resources/weighted_graph.txt | ./bin/main
-    runDijkstra();
+    // runFordFulkerson();
+    // runDijkstra();
+    // runBellmanFord();
+    // runDepthFirstSearch();
+    // runBreadthFirstSearch();
 
     return 0;
 }
