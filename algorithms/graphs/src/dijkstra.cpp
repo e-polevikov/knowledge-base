@@ -10,7 +10,7 @@ The function below takes a weighted graph and a source vertex
 as input and returns a list of shortest paths from the source
 vertex to all other vertices of the graph. All the weights are
 assummed to be non-negative numbers. The function utilizes
-the Dijkstra's algorithm to calculate the distances.
+the Dijkstra's algorithm to find the shortest paths.
 */
 
 std::vector<Path> dijkstra(
@@ -20,7 +20,7 @@ std::vector<Path> dijkstra(
     std::vector<int> distances(graph.size(), INF);
     std::vector<int> predecessors(graph.size(), -1);
 
-    // min priority queue
+    // Min priority queue
     std::priority_queue<
         std::pair<int, int>,
         std::vector<std::pair<int, int>>,
