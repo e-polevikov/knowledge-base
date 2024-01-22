@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.11.20)  21 JAN 2024 18:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.11.20)  22 JAN 2024 11:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -544,14 +544,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
+[1
 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-[1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
@@ -561,12 +561,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
-
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
-[2]
+
 Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
@@ -601,66 +601,82 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
-
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
-[5]
+
 Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
  []
 
 [7]
-Overfull \hbox (4.26163pt too wide) in paragraph at lines 260--261
+Overfull \hbox (2.63039pt too wide) in paragraph at lines 258--259
+\T2A/cmr/bx/n/10 ѕоследовательностью \T2A/cmr/m/n/10 бу-дем на-зы-вать про-из-в
+оль-ное отоб-ра-же-ние из мно-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
+
+ []
+
+[8]
+Overfull \hbox (4.26163pt too wide) in paragraph at lines 301--302
 \T2A/cmr/bx/n/10 ством эле-мен-тра-ных со-бы-тий \T2A/cmr/m/n/10 (про-стран-ств
 ом ис-хо-дов). –ас-смот-рим при-
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
+[9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
 
  []
 
 
-Overfull \hbox (4.14719pt too wide) in paragraph at lines 298--299
+Overfull \hbox (4.14719pt too wide) in paragraph at lines 349--350
 []\T2A/cmr/m/n/10 ѕод \T2A/cmr/bx/n/10 се-тью \T2A/cmr/m/n/10 бу-дем по-ни-мать
  неко-то-рый ори-ен-ти-ро-ван-ный граф $\OML/cmm/m/it/10 G\OT1/cmr/m/n/10 (\OML
 /cmm/m/it/10 V; E; s; t; c\OT1/cmr/m/n/10 )$\T2A/cmr/m/n/10 ,
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 308--309
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 321--322
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
 
  []
 
-[10] (./math.aux)
+[12] (./math.aux)
 Package rerunfilecheck Info: File `math.out' has not changed.
-(rerunfilecheck)             Checksum: 8FB27EB8710E64668E3C0DC89645DA15;7525.
+(rerunfilecheck)             Checksum: 69C99A0B7401D6526B2F6E318F60083F;9467.
  ) 
 Here is how much of TeX's memory you used:
- 10119 strings out of 479721
- 154556 string characters out of 5887696
- 464152 words of memory out of 5000000
- 27909 multiletter control sequences out of 15000+600000
+ 10135 strings out of 479721
+ 154792 string characters out of 5887696
+ 467155 words of memory out of 5000000
+ 27916 multiletter control sequences out of 15000+600000
  477079 words of font info for 46 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 60i,7n,63p,804b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,7n,63p,804b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/evgeny/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.60
 0pk> </home/evgeny/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.60
 0pk> </home/evgeny/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1000.60
@@ -677,10 +693,10 @@ s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm10.pfb>
-Output written on math.pdf (10 pages, 203835 bytes).
+Output written on math.pdf (12 pages, 214815 bytes).
 PDF statistics:
- 537 PDF objects out of 1000 (max. 8388607)
- 276 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
- 225 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 591 PDF objects out of 1000 (max. 8388607)
+ 319 compressed objects within 4 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 281 words of extra memory for PDF output out of 10000 (max. 10000000)
 
