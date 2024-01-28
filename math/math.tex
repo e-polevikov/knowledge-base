@@ -199,22 +199,38 @@ $$ \phi = \arccos\left(\frac{(x, y)}{|x| \cdot |y|}\right) $$
 	\item $A (\lambda x) = \lambda \cdot Ax$
 \end{enumerate}
 
+Пример линейного оператора в двумерном пространстве - оператор повотора на угол $\alpha$:
+
+\[
+	\begin{pmatrix}
+		\cos \alpha &  -\sin \alpha \\
+		\sin \alpha & \cos \alpha
+	\end{pmatrix}
+\]
+
 \subsubsection{Ядро и образ оператора}
 
-...
+- Ядро оператора - это все вектора, которые данный оператор обращает в нулевой вектор. \\
+- Образ оператора - это множество всех ненулевых векторов, которые получаются в результате действия данного оператора. \\
 
 \subsubsection{Собственные числа и собственные векторы}
 
-...
+$u$ - собственный вектор линейного оператора $A$, если $Au = \lambda u$. $\lambda$ - собственное число оператора. \\
 
-\subsection{Определитель матрицы}
+- \href{https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors}{Eigenvalues and eigenvectors}
 
-Урок на Stepik: \href{https://stepik.org/lesson/44077/step/1?unit=21901}{Определитель матрицы}. \\
-Статья в Wiki: \href{https://en.wikipedia.org/wiki/Determinant}{Determinant}.
+\subsection{Матрицы. Произведение. Определитель и ранг.}
+
+- Урок на Stepik: \href{https://stepik.org/lesson/44077/step/1?unit=21901}{Определитель матрицы}. \\
+- Статья в Wiki: \href{https://en.wikipedia.org/wiki/Determinant}{Determinant}. \\
+- Произведение матриц: \href{https://en.wikipedia.org/wiki/Matrix_multiplication}{Matrix multiplication}. \\
+- Обшая статья про матрицы: \href{https://en.wikipedia.org/wiki/Matrix_(mathematics)}{Matrix} \\
+
+Определитель матрицы - это некоторое число, которое характеризует данную матрицу. \href{https://en.wikipedia.org/wiki/Leibniz_formula_for_determinants}{Формальное определение определителя (формула Лейбница)}.
 
 \subsection{Уравнение прямой. Пересечение прямых.}
 
-...
+\href{https://portal.tpu.ru/SHARED/p/PEG/page_2/laag/Tab1/LAAG_Lecture-12.pdf}{Лекция: прямая на плоскости}
 
 \section{Математический анализ}
 
@@ -245,14 +261,6 @@ $$ \phi = \arccos\left(\frac{(x, y)}{|x| \cdot |y|}\right) $$
 
 \textbf{Аксиома полноты:} $\forall A, B \subset \mathbb{R}$ и $\forall x,y: x \in A, \ y \in B$ и при этом $x \le y$, найдется $z \in R$, такое, что $x \le z \le y$.
 
-\subsubsection{Принцип математической индукции}
-
-...
-
-\subsubsection{Принцип Архимеда}
-
-...
-
 \subsection{Последовательности. Предел последовательности.}
 
 \textbf{Последовательностью} будем называть произвольное отображение из множества натуральных чисел в множество вещественных чисел: $\mathbb{N} \to \mathbb{R}$. Примеры последовательностей:
@@ -264,19 +272,15 @@ $$ \phi = \arccos\left(\frac{(x, y)}{|x| \cdot |y|}\right) $$
 
 Число $a$ называется \textbf{пределом} последовательности $\lim\limits_{n \to \infty} x_n = a$ если $$ \forall \epsilon > 0 \ \exists N :  \ \forall n > N \ |x_n - a| < \epsilon.$$
 
-\subsection{Функции и непрерывность}
-
-Окрестностью точки $a$ будем называть любой интервал $U_a$ вида $(a - \epsilon, a + \epsilon)$. Проколотой окрестностью будем называть окрестность вида $U_{a} \setminus {a}$. \\
-
-Будем говорить, что  $a$ -- предельная точка множества $E \subset \mathbb{R}$ если пересечение любой проколотой окрестности точки $a$ с этим множеством непусто: $\overset{\bullet}{U_a} \cap E \ne \emptyset$.
+\subsection{Функции. Предел функции. Непрерывность.}
 
 \subsubsection{Функции. Предел функции}
 
 Функцией $f : \left(\mathbb{E} \subset \mathbb{R}\right) \to \mathbb{R}$ будем называть некоторое правило, по которому каждому элементу множества $E$ ставится в соответствие некоторое вещественное число. \\
 
-\textbf{Определение предела функции} (по Коши). Число $A$ называется пределом функции $f : \mathbb{E} \to \mathbb{R}$, если 
+\textbf{Определение предела функции} (по Коши). Число $A$ называется пределом функции $f : \mathbb{E} \to \mathbb{R}$ в точке $a$, если 
 
-$$ \forall \epsilon > 0 \ \exists \delta > 0 : \forall x \in E : x \ne a, |x - a| < \delta \ |f(x) - A| < \epsilon $$.
+$$ \forall \epsilon > 0 \ \exists \delta > 0 : \forall x \in E : x \ne a, |x - a| < \delta \implies |f(x) - A| < \epsilon $$.
 
 Определение на языке пределов: $A$ -- предел функции $f$ в точке $a$, если для любой последовательности $\{x_n\} \in E$, такой, что $x_n \ne a$ и $\lim\limits_{n \to \infty} x_n = a$ выполнено $\lim\limits_{n \to \infty} f(x_n) = A$.
 
@@ -288,7 +292,93 @@ $$ \lim\limits_{x \to a} f(x) = f(a) $$
 
 Эквивалентное определение. Функция $f$ непрерывна в точке $a$, если
 
-$$ \forall \epsilon > 0 \ \exists \delta > 0 : |x - a| < \delta \ |f(x) - f(a)| < \epsilon $$.
+$$ \forall \epsilon > 0 \ \exists \delta > 0 : |x - a| < \delta \ \implies |f(x) - f(a)| < \epsilon $$
+
+\subsection{Производные 1}
+
+Материалы на Stepik:
+
+\begin{itemize}
+	\item \href{https://stepik.org/lesson/28380/step/1}{Дифференцируемость и производная}
+	\item \href{https://stepik.org/lesson/28380/step/4}{Геометрический смысл производной}
+	\item \href{https://stepik.org/lesson/28380/step/6}{Правила дифференцирования}
+	\item \href{https://stepik.org/lesson/28380/step/8}{Производные основных элементраных функций}
+	\item \href{https://stepik.org/lesson/28369/step/2}{Теоремы о среднем}
+	\item \href{https://stepik.org/lesson/28370/step/1}{Производная и монотонность}
+	\item \href{https://stepik.org/lesson/28381/step/1}{Правило Лопиталя}
+\end{itemize}
+
+Будем говорить, что функция $f$ дифференцируема в точке $x_0$ если существует такое число $k \in \mathbb{R}$, что
+
+$$ f(x) = f(x_0) + k \cdot (x - x_0) + o(x - x_0) $$
+
+То есть значение функции в точке $x_0$ можно посчитать так, как описано выше. \\
+
+Производной функции $f$ в точке $x_0$ называется предел отношения приращения функции к приращению аргумента:
+
+$$ f^{\prime}(x_0) = \lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} $$
+
+Значение производной в заданной точке равно угловому коэффициенту касательной в этой точке (геометрический смысл производной). \\
+
+\textbf{Теорема Ферма}. Пусть $f$ - функция, заданная на промежутке $<a, b> \ \to \mathbb{R}$ и дифференцируема в точке $x_0 \in (a, b)$. Пусть $f(x_0)$ - максимум или минимум функции $f$ в точке $x_0$. Тогда $f^{\prime}(x_0) = 0$. \\
+
+\textbf{Условия монотонности функции.} Пусть $f: \ <a, b> \ \to \mathbb{R}$ непрерывна и дифференцируема на $(a, b)$. Тогда функция $f$ возрастает на $<a, b>$ тогда и только тогда, когда $f^{\prime}(x) \ge 0 \ \forall x \in (a, b)$. Если $f^{\prime}(x) > 0$, то функция строго возрастает.
+
+\subsection{Производные 2}
+
+Материалы на Stepik:
+
+\begin{itemize}
+	\item \href{https://stepik.org/lesson/32797/step/1}{Формула Тейлора}
+	\item \href{https://stepik.org/lesson/28372/step/2}{Экстремумы функции}
+\end{itemize}
+
+\subsubsection{Разложение функции в ряд Тейлора}
+
+Рядом Тейлора называется выражение вида $$ \sum_{n = 0}^{\infty} \frac{f^{(n)}(x_0)}{n!} (x - x_0)^n $$
+
+Если для функции $f$ все её производные ограничены некоторой константой $M$, то 
+
+$$ f(x) = \sum_{n = 0}^{\infty} \frac{f^{(n)}(x_0)}{n!} (x - x_0)^n $$
+
+В частности $$e^x = \sum_{n = 0}^{\infty} \frac{x^n}{n!}$$
+
+\subsubsection{Необходимые и достаточные условия экстремума функции}
+
+Для того, чтобы точка $x_0$ являлась экстремумом функции $f$, необходимо, чтобы $f^{\prime}(x_0) = 0$. Но если последнее выполнено, то это не значит, что точка $x_0$ является экстремумом. Достаточные условия того, что точка $x_0$ - экстремум, такие:
+
+\begin{itemize}
+	\item Если $f^{\prime \prime}(x_0) < 0$, то $x_0$ - точка максимума.
+	\item Если $f^{\prime \prime}(x_0) > 0$, то $x_0$ - точка минимума.
+\end{itemize}
+
+\subsection{Интегралы 1}
+
+\begin{itemize}
+	\item \href{https://stepik.org/lesson/28376/step/1}{Первообразная и неопределенный интеграл}
+	\item \href{https://stepik.org/lesson/28377/step/1}{Действия с неопределенными интегралами}
+	\item \href{https://stepik.org/lesson/28378/step/2}{Площади}
+	\item \href{https://stepik.org/lesson/28379/step/1}{Определенный интеграл}
+\end{itemize}
+
+Функция $F(x)$ - первообразная функции $f(x)$, если $F^{\prime}(x) = f(x)$. \\
+
+Неопределенным интегралом для функции $f$ называется множество всех первообразных этой функции:
+
+$$ \int f(x) dx = F(x) + C $$
+
+- \href{https://stepik.org/lesson/28376/step/3}{Таблица основных интегралов}. \\
+- \href{https://stepik.org/lesson/28377/step/2}{Действия с неопределенными интегралами} \\
+- \href{https://stepik.org/lesson/28379/step/2}{Определенный интеграл} \\
+
+Рассмотрим функцию $f : [a, b] \to \mathbb{R}$. Определенным интегралом $f$ по отрезку $[a, b]$ назовем разность положительных и отрицательных состовляющих площадей функции. Обозначение: $$ \int_{a}^{b} f(x) dx $$
+
+Формула Ньютона-Лейбница: $$ \int_{a}^{b} f(x) dx = F(b) - F(a) $$
+
+\subsection{Интегралы 2}
+
+- \href{https://stepik.org/lesson/35886/step/2}{Равномерная непрерывность} \\
+- \href{https://stepik.org/lesson/28384/step/1}{Интегральные суммы}
 
 \section{Теория вероятностей}
 
@@ -339,8 +429,6 @@ $$ P(A) = \sum_{i: \ w_i \in A} p_i $$
 ...
 
 \section{Теория графов}
-
-...
 
 \subsection{Потоки и сети}
 

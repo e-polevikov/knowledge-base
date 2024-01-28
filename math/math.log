@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.11.20)  22 JAN 2024 11:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.11.20)  28 JAN 2024 16:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -535,18 +535,24 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)
+Overfull \hbox (1.94305pt too wide) in paragraph at lines 30--30
+ [][] [][]\T2A/cmr/m/n/10 Необходимые и до-ста-точ-ные усло-вия экс-тре-му-ма ф
+унк- 
+ []
+
+)
 \tf@toc=\write4
 \openout4 = `math.toc'.
 
+ [1
 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-[1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
@@ -612,68 +618,103 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--185
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
+Underfull \hbox (badness 10000) in paragraph at lines 213--215
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--228
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
 
 [7]
-Overfull \hbox (2.63039pt too wide) in paragraph at lines 258--259
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
+
+ []
+
+
+Overfull \hbox (2.63039pt too wide) in paragraph at lines 266--267
 \T2A/cmr/bx/n/10 Последовательностью \T2A/cmr/m/n/10 бу-дем на-зы-вать про-из-в
 оль-ное отоб-ра-же-ние из мно-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 269--270
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
-
- []
-
 [8]
-Overfull \hbox (4.26163pt too wide) in paragraph at lines 301--302
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--324
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 364--365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--373
+
+ []
+
+[11]
+Overfull \hbox (4.26163pt too wide) in paragraph at lines 391--392
 \T2A/cmr/bx/n/10 ством эле-мен-тра-ных со-бы-тий \T2A/cmr/m/n/10 (про-стран-ств
 ом ис-хо-дов). Рас-смот-рим при-
  []
 
-[9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
 
  []
 
 
-Overfull \hbox (4.14719pt too wide) in paragraph at lines 349--350
+Overfull \hbox (4.14719pt too wide) in paragraph at lines 437--438
 []\T2A/cmr/m/n/10 Под \T2A/cmr/bx/n/10 се-тью \T2A/cmr/m/n/10 бу-дем по-ни-мать
  неко-то-рый ори-ен-ти-ро-ван-ный граф $\OML/cmm/m/it/10 G\OT1/cmr/m/n/10 (\OML
 /cmm/m/it/10 V; E; s; t; c\OT1/cmr/m/n/10 )$\T2A/cmr/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+Underfull \hbox (badness 10000) in paragraph at lines 447--448
 
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 372--373
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
 
  []
 
-[12] (./math.aux)
+[14] (./math.aux)
 Package rerunfilecheck Info: File `math.out' has not changed.
-(rerunfilecheck)             Checksum: 69C99A0B7401D6526B2F6E318F60083F;9467.
+(rerunfilecheck)             Checksum: DBCC9A3EB0341880E0E932D8AD9529E8;10661.
  ) 
 Here is how much of TeX's memory you used:
- 10135 strings out of 479721
- 154792 string characters out of 5887696
- 467155 words of memory out of 5000000
- 27916 multiletter control sequences out of 15000+600000
+ 10145 strings out of 479721
+ 154926 string characters out of 5887696
+ 468156 words of memory out of 5000000
+ 27920 multiletter control sequences out of 15000+600000
  477079 words of font info for 46 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
  60i,7n,63p,804b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -689,14 +730,15 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
-ols/msbm10.pfb>
-Output written on math.pdf (12 pages, 214815 bytes).
+/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
+10.pfb>
+Output written on math.pdf (14 pages, 234383 bytes).
 PDF statistics:
- 591 PDF objects out of 1000 (max. 8388607)
- 319 compressed objects within 4 object streams
- 67 named destinations out of 1000 (max. 500000)
- 281 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 665 PDF objects out of 1000 (max. 8388607)
+ 375 compressed objects within 4 object streams
+ 73 named destinations out of 1000 (max. 500000)
+ 313 words of extra memory for PDF output out of 10000 (max. 10000000)
 
