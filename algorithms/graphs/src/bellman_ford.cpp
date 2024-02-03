@@ -16,8 +16,11 @@ std::vector<int> bellmanFord(
             }
 
             for (const auto& edges : graph[vtx]) {
-                if (distances[vtx] + edges.second < distances[edges.first]) {
-                    distances[edges.first] = distances[vtx] + edges.second;
+                int neighbourVtx = edges.first;
+                int vtxToNeighbourDist = edges.second;
+
+                if (distances[vtx] + vtxToNeighbourDist < distances[neighbourVtx]) {
+                    distances[neighbourVtx] = distances[vtx] + vtxToNeighbourDist;
                 }
             }
         }

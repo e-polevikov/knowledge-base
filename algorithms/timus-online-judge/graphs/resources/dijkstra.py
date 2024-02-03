@@ -28,3 +28,7 @@ def main():
                 heapq.heappush(pqueue, (updated_dist, neighbour))
     
     print(distances[target])
+
+
+if __name__ == "__main__":
+    main()
