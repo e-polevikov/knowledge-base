@@ -4,7 +4,7 @@
 
 ### Graphs
 
-See [this folder](https://github.com/e-polevikov/algorithms-and-math/tree/main/algorithms/graphs/src).
+See [this folder](https://github.com/e-polevikov/algorithms-and-math/tree/main/algorithms/graphs).
 
 ## Math
 
