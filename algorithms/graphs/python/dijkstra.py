@@ -7,9 +7,9 @@ def main():
 
     for _ in range(m):
         v_from, v_to, weight = map(int, input().split())
-        graph[v_from - 1].append([v_to - 1, weight])
+        graph[v_from].append([v_to, weight])
     
-    source, target = map(lambda x: int(x) - 1, input().split())
+    source, target = map(int, input().split())
 
     distances = [float('inf') for _ in range(n)]
     distances[source] = 0
