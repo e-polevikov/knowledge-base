@@ -3,17 +3,11 @@
 #include <unordered_set>
 
 struct Edge {
-  int id, vtxTo, cost, time, height;
+  int vtxFrom, vtxTo, cost, time, height;
 
-  Edge(int id, int vtxTo, int cost, int time, int height)
-  : id(id), vtxTo(vtxTo), cost(cost), time(time), height(height)
+  Edge(int vtxFrom, int vtxTo, int cost, int time, int height)
+  : vtxFrom(vtxFrom), vtxTo(vtxTo), cost(cost), time(time), height(height)
   { }
-};
-
-struct Vertex {
-  int id, key;
-
-  Vertex(int id, int key) : id(id), key(key) {} 
 };
 
 struct Constraints {
@@ -28,57 +22,80 @@ struct Constraints {
   { }
 };
 
-void buildPath(
-  const std::vector<std::vector<Edge>> &graph,
-  int target,
-  std::vector<Vertex> &orderedPath,
-  std::unordered_set<int> &pathVertices,
-  Constraints &constraints
+const int INF = 1000000000;
+
+std::vector<int> findPath(
+  int numVertices,
+  int source, int target,
+  const std::vector<Edge> &edges,
+  const Constraints &constraints
 ) {
-  if (orderedPath.back().key == target) {
-    return;
+  int times[numVertices][numVertices];
+  int paths[numVertices][numVertices];
+  std::vector<int> path;
+
+  for (int i = 0; i < numVertices; i++) {
+    for (int j = 0; j < numVertices; j++) {
+      times[i][j] = INF;
+      paths[i][j] = -1;
+    }
   }
 
-  for (const auto& edge : graph[orderedPath.back().key]) {
-    if (pathVertices.find(edge.vtxTo) != pathVertices.end()) {
-      continue;
+  times[source][0] = 0;
+  for (int currCost = 0; currCost < numVertices; currCost++) {
+    while (true) {
+      bool updated = false;
+
+      for (int edgeId = 0; edgeId < edges.size(); edgeId++) {
+        Edge edge = edges[edgeId];
+
+        if (edge.height > constraints.maxHeight) {
+          continue;
+        }
+
+        int updatedTime = INF;
+
+        if (edge.cost == 0) {
+          updatedTime = times[edge.vtxFrom][currCost] + edge.time;
+        } else if (currCost > 0) {
+          updatedTime = times[edge.vtxFrom][currCost - 1] + edge.time;
+        }
+        
+        if (updatedTime < times[edge.vtxTo][currCost]) {
+          times[edge.vtxTo][currCost] = updatedTime;
+          paths[edge.vtxTo][currCost] = edgeId;
+          updated = true;
+        }
+
+        if (edge.vtxTo == target &&
+          currCost <= constraints.maxCost &&
+          times[target][currCost] <= constraints.maxTime
+        ) {
+          while (edgeId != -1) {
+            path.push_back(edgeId + 1);
+            target = edges[edgeId].vtxFrom;
+            currCost -= edges[edgeId].cost;
+            edgeId = paths[target][currCost];            
+          }
+
+          return path;
+        }
+      }
+
+      if (!updated) {
+        break;
+      }
     }
-
-    if (constraints.totalCost + edge.cost > constraints.maxCost) {
-      continue;
-    }
-
-    if (constraints.totalTime + edge.time > constraints.maxTime) {
-      continue;
-    }
-
-    if (edge.height > constraints.maxHeight) {
-      continue;
-    }
-
-    orderedPath.push_back(Vertex(edge.id, edge.vtxTo));
-    pathVertices.insert(edge.vtxTo);
-    constraints.totalCost += edge.cost;
-    constraints.totalTime += edge.time;
-
-    buildPath(graph, target, orderedPath, pathVertices, constraints);
-
-    if (orderedPath.back().key == target) {
-      return;
-    }
-
-    orderedPath.pop_back();
-    pathVertices.erase(edge.vtxTo);
-    constraints.totalCost -= edge.cost;
-    constraints.totalTime -= edge.time;
   }
+
+  return path;
 }
 
 int main() {
   std::ios_base::sync_with_stdio(false);
 
   int numVertices, numEdges, source, target, maxCost, maxTime;
-  int minHeight = 1000000000;
+  int minHeight = INF;
   int maxHeight = 0;
 
   std::cin >> numVertices >> numEdges >> source >> target >> maxCost >> maxTime;
@@ -86,27 +103,26 @@ int main() {
   source -= 1;
   target -= 1;
   
-  std::vector<std::vector<Edge>> graph(numVertices, std::vector<Edge>());
+  std::vector<Edge> edges;
   int vtxFrom, vtxTo, cost, time, height;
   for (int i = 0; i < numEdges; i++) {
     std::cin >> vtxFrom >> vtxTo >> cost >> time >> height;
-    graph[vtxFrom - 1].push_back(Edge(
-      i + 1, vtxTo - 1, cost, time, height
+    edges.push_back(Edge(
+      vtxFrom - 1, vtxTo - 1, cost, time, height
     ));
     minHeight = std::min(minHeight, height);
     maxHeight = std::max(maxHeight, height);
   }
 
-  std::vector<Vertex> orderedPath;
-  std::unordered_set<int> pathVertices;
   Constraints constraints(0, 0, maxCost, maxTime, maxHeight);
 
-  orderedPath.push_back(Vertex(-1, source));
-  pathVertices.insert(source);
+  std::vector<int> path = findPath(
+    numVertices,
+    source, target,
+    edges, constraints
+  );
 
-  buildPath(graph, target, orderedPath, pathVertices, constraints);
-
-  if (orderedPath.back().key != target) {
+  if (path.size() == 0) {
     std::cout << -1 << std::endl;
     return 0;
   }
@@ -117,28 +133,27 @@ int main() {
 
   while (left <= right) {
     int currHeight = (left + right) / 2;
-    std::vector<Vertex> currOrderedPath;
-    std::unordered_set<int> currPathVertices;
     Constraints currConstraints(0, 0, maxCost, maxTime, currHeight);
 
-    currOrderedPath.push_back(Vertex(-1, source));
-    currPathVertices.insert(source);
-
-    buildPath(graph, target, currOrderedPath, currPathVertices, currConstraints);
-
-    if (currOrderedPath.back().key != target) {
+    std::vector<int> currPath = findPath(
+      numVertices,
+      source, target,
+      edges, currConstraints
+    );
+    
+    if (currPath.size() == 0) {
       left = currHeight + 1;
     } else {
-      orderedPath = std::move(currOrderedPath);
+      path = std::move(currPath);
       optimalHeight = currHeight;
       right = currHeight - 1;
     }
   }
 
   std::cout << optimalHeight << std::endl;
-  std::cout << orderedPath.size() - 1 << std::endl;
-  for (int i = 1; i < orderedPath.size(); i++) {
-    std::cout << orderedPath[i].id << " ";
+  std::cout << path.size() << std::endl;
+  for (int i = 0; i < path.size(); i++) {
+    std::cout << path[path.size() - i - 1] << " ";
   }
 
   return 0;
