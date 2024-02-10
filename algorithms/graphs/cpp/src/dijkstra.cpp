@@ -11,6 +11,9 @@ as input and returns a list of shortest paths from the source
 vertex to all other vertices of the graph. All the weights are
 assummed to be non-negative numbers. The function utilizes
 the Dijkstra's algorithm to find the shortest paths.
+
+See also:
+  - https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 */
 
 std::vector<Path> dijkstra(

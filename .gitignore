@@ -4,3 +4,5 @@ bin
 .vscode
 *.gz
 *.log
+
+JUDGE_ID.txt
