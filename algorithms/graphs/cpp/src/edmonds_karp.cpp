@@ -116,6 +116,29 @@ void sendFlow(
         }
     }
 }
+
+Flow reconstructFlow(
+    std::vector<std::vector<Edge>> &residualNetwork,
+    int maxFlow
+) {
+    Flow flow = Flow(maxFlow);
+
+    for (int i = 0; i < residualNetwork.size(); i++) {
+        for (int j = 0; j < residualNetwork[i].size(); j++) {
+            Edge edge = residualNetwork[i][j];
+
+            if (edge.initialCapacity > 0) {
+                flow.edges.push_back(EdgeFlow(
+                    i, edge.vtxTo,
+                    edge.initialCapacity - edge.capacity
+                ));
+            }
+        }
+    }
+
+    return flow;
+}
+
 }
 
 Flow edmondsKarp(
@@ -132,20 +155,7 @@ Flow edmondsKarp(
         maxFlow += pathFlow;
     }
 
-    Flow flow = Flow(maxFlow);
-
-    for (int i = 0; i < residualNetwork.size(); i++) {
-        for (int j = 0; j < residualNetwork[i].size(); j++) {
-            Edge edge = residualNetwork[i][j];
-
-            if (edge.initialCapacity > 0) {
-                flow.edges.push_back(EdgeFlow(
-                    i, edge.vtxTo,
-                    edge.initialCapacity - edge.capacity
-                ));
-            }
-        }
-    }
+    Flow flow = reconstructFlow(residualNetwork, maxFlow);
 
     return flow;
 }
