@@ -7,6 +7,30 @@
 #include "dijkstra.hpp"
 #include "bellman_ford.hpp"
 #include "ford_fulkerson.hpp"
+#include "edmonds_karp.hpp"
+
+void runEdmondsKarp() {
+    std::vector<std::vector<std::pair<int, int>>> graph;
+    bool isDirected = true;
+
+    readGraph(graph, isDirected);
+
+    std::cout << "Network:" << std::endl;
+    printGraph(graph);
+
+    Flow flow = edmondsKarp(graph);
+
+    std::cout << "Max flow from 0 to " << graph.size() - 1;
+    std::cout << ": " << flow.value << std::endl;
+
+    std::cout << "Flow: " << std::endl;
+
+    for (int i = 0; i < flow.edges.size(); i++) {
+        std::cout << flow.edges[i].vtxFrom << " ";
+        std::cout << flow.edges[i].vtxTo << " ";
+        std::cout << flow.edges[i].value << std::endl;
+    }    
+}
 
 void runFordFulkerson() {
     std::vector<std::vector<std::pair<int, int>>> graph;
@@ -90,6 +114,7 @@ void runBreadthFirstSearch() {
 int main() {
     // cat resources/*.txt | ./bin/main
 
+    runEdmondsKarp();
     // runFordFulkerson();
     // runDijkstra();
     // runBellmanFord();
