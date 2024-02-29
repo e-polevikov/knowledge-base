@@ -6,3 +6,4 @@ bin
 *.log
 
 JUDGE_ID.txt
+*.pyc
