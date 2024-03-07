@@ -1,5 +1,9 @@
 # C++
 
+## Типы
+
+* [https://en.cppreference.com/w/cpp/language/types](https://en.cppreference.com/w/cpp/language/types)
+
 ## Data Structures
 
 - vector
