@@ -3,7 +3,7 @@
 # Frontend
   - HTML, CSS
   - JS, TS
-  - React
+  - React, Redux
 
 ## Backend
   - Flask
