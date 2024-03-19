@@ -1,0 +1,18 @@
+Preprocessor:
+
+g++ -E pow.cpp -o pow.ii
+g++ -E main.cpp -o main.ii
+
+Assembly:
+
+g++ -S pow.ii
+g++ -S main.ii
+
+To get object files:
+
+g++ -c pow.s
+g++ -c main.s
+
+To link object files:
+
+g++ pow.o main.o -o main
