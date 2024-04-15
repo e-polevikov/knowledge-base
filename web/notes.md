@@ -12,3 +12,7 @@
 
 ## Other
   - Docker
+
+## HTTP(S)
+
+- https://www.youtube.com/watch?v=QjhS4lvvo98 (How HTTPS works)
