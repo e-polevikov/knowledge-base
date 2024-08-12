@@ -33,6 +33,14 @@ def get_deltas(values):
     return np.array(deltas, dtype=np.float64)
 
 
+def values_equal(values1, values2, idxs):
+    for idx in idxs:
+        if values1[idx] != values2[idx]:
+            return False
+    
+    return True
+
+
 def main():
     N = 10
 
@@ -46,6 +54,9 @@ def main():
     num_equal_deltas_var_permutations = 0
     for values_permutation in permutations(values_copy):
         values_permutation = np.array(values_permutation, dtype=np.float32)
+
+        if not values_equal(values, values_permutation, [0, 2, 4, 6, 8]):
+            continue
 
         if same_order(values, values_permutation):
             num_same_order_permutations += 1
