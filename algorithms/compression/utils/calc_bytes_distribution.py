@@ -62,14 +62,17 @@ if __name__ == "__main__":
     filename = sys.argv[1]
 
     input_bytes = None
+
+    with open(filename, "rb") as f:
+        input_bytes = f.read()
+    '''
     bits_distributions = []
     bit7 = ""
 
     for _ in range(32):
         bits_distributions.append([0, 0])
 
-    with open(filename, "rb") as f:
-        input_bytes = f.read()
+
 
     for i in range(0, len(input_bytes), 4):
         float32 = input_bytes[i:i + 4]
@@ -80,21 +83,34 @@ if __name__ == "__main__":
             
             if idx in [0]:
                 bit7 += str(int(bit))
+    '''
 
     bytes_by_counts = Counter(input_bytes).most_common()
-    tree_root, codes = build_prefix_codes(bytes_by_counts)
+    #tree_root, codes = build_prefix_codes(bytes_by_counts)
 
     code_length = 0
     entropy = 0.0
 
     for b, count in bytes_by_counts:
-        code_length += count * len(codes[b])
-        entropy += -(count / len(input_bytes)) * math.log(count / len(input_bytes))
+        print(b, count)
+        prev_idx = None
     
-    print("Huffman code length (bytes): ", code_length / 8)
-    print("Initial num of bytes: ", len(input_bytes))
-    print("Entropy:", entropy)
-
+        for i in range(len(input_bytes)):
+            if input_bytes[i] == b:
+                if prev_idx is None:
+                    prev_idx = i
+                else:
+                    print(i - prev_idx, end=" ")
+                    prev_idx = i
+            
+        print()
+        #code_length += count * len(codes[b])
+        #entropy += -(count / len(input_bytes)) * math.log(count / len(input_bytes))
+    
+    #print("Huffman code length (bytes): ", code_length / 8)
+    #print("Initial num of bytes: ", len(input_bytes))
+    #print("Entropy:", entropy)
+    '''
     for idx, bit_counts in enumerate(bits_distributions):
         bit_counts_ratio = None
 
@@ -121,3 +137,4 @@ if __name__ == "__main__":
     print(byte7_entropy)
     print(code_length / 11)
     print(len(bit7))
+    '''
